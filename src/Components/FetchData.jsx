@@ -19,6 +19,7 @@ const FetchData = () => {
   useEffect(()=>{
     fetchData();
   },[]);
+  let w = { width: "400px" };
   let a = data.map((items)=>{
     return(
         <div className="p-8">

@@ -7,7 +7,7 @@ import HelpIcon from '@mui/icons-material/Help';
 import styled from 'styled-components';
 const Container = styled.div`
   height: 10vh;
-  background-color: whitesmoke;
+  background-color: black;
   padding: 10px 0px 10px 0;
 `;
 const Wrapper = styled.div`
@@ -29,6 +29,7 @@ const TextContainer = styled.div`
 const Title = styled.h5`
   margin: 10px 15px 10px 15px;
   font-size: 15px;
+  color: white;
 `;
 const Right = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-                <NewspaperOutlinedIcon style={{fontSize: "30px"}} />
+                <NewspaperOutlinedIcon style={{fontSize: "30px",color: "white"}} />
                 <TextContainer>
                     <Title>LEARN</Title>
                     <Title>BLOG</Title>
@@ -52,10 +53,10 @@ const Navbar = () => {
                 </TextContainer>
             </Left>           
             <Right>
-                <TwitterIcon style={{margin: "10px 10px 10px 10px"}}/>
-                <InstagramIcon style={{margin: "10px 10px 10px 10px"}} />
-                <MailOutlineIcon style={{margin: "10px 10px 10px 10px"}}/>
-                <HelpIcon style={{margin: "10px 10px 10px 10px"}}/>
+                <TwitterIcon style={{margin: "10px 10px 10px 10px",color: "white"}}/>
+                <InstagramIcon style={{margin: "10px 10px 10px 10px",color: "white"}} />
+                <MailOutlineIcon style={{margin: "10px 10px 10px 10px",color: "white"}}/>
+                <HelpIcon style={{margin: "10px 10px 10px 10px",color: "white"}}/>
             </Right>
         </Wrapper>
     </Container>
