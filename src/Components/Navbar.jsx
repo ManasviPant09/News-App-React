@@ -6,7 +6,9 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import HelpIcon from '@mui/icons-material/Help';
 import styled from 'styled-components';
 const Container = styled.div`
-  height: 5vh;
+  height: 10vh;
+  background-color: whitesmoke;
+  padding: 10px 0px 10px 0;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -26,12 +28,14 @@ const TextContainer = styled.div`
 `;
 const Title = styled.h5`
   margin: 10px 15px 10px 15px;
+  font-size: 15px;
 `;
 const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content : flex-end;
   flex : 1;
+  margin-right: 20px;
 `;
 const Navbar = () => {
   return (
@@ -48,10 +52,10 @@ const Navbar = () => {
                 </TextContainer>
             </Left>           
             <Right>
-                <TwitterIcon style={{margin: "10px 5px 10px 5px"}}/>
-                <InstagramIcon style={{margin: "10px 5px 10px 5px"}} />
-                <MailOutlineIcon style={{margin: "10px 5px 10px 5px"}}/>
-                <HelpIcon style={{margin: "10px 5px 10px 5px"}}/>
+                <TwitterIcon style={{margin: "10px 10px 10px 10px"}}/>
+                <InstagramIcon style={{margin: "10px 10px 10px 10px"}} />
+                <MailOutlineIcon style={{margin: "10px 10px 10px 10px"}}/>
+                <HelpIcon style={{margin: "10px 10px 10px 10px"}}/>
             </Right>
         </Wrapper>
     </Container>
