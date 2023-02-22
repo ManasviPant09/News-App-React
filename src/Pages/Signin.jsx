@@ -34,30 +34,51 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 const Content = styled.div`
   width: 23%;
   height: 89vh;
   background: linear-gradient(to top,#aed8f7,white 75%);
-  border-radius: 15px;
+  border-radius: 0px;
   box-shadow: 5px 5px 25px -5px;
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+  }
 `;
 const ImageContainer = styled.img`
    width: 50%;
    height: 20vh;
+   @media (max-width: 768px) { 
+    width: 100%;
+  }
 `;
 const TextContainer = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
+  @media (max-width: 768px) { 
+    margin: 5% 0;
+  }
 `;
 const Title = styled.h3`
   color: #6249a3;
   margin-bottom: 2px;
   font-size: 17px;
+  @media (max-width: 768px) { 
+    width: 100%;
+    margin: 0 20px 10px 20px;
+  }
 `;
 const Body = styled.h6`
   font-weight: 400;
   font-size: 12px;
+  @media (max-width: 768px) { 
+    width: 100%;
+    margin: 10px 20px 0px 20px;
+  }
 `;
 const Form = styled.form`
   display: flex;
