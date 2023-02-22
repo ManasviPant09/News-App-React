@@ -37,7 +37,7 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   width: 23%;
-  height: 85vh;
+  height: 89vh;
   background: linear-gradient(to top,#aed8f7,white 75%);
   border-radius: 15px;
   box-shadow: 5px 5px 25px -5px;
@@ -48,14 +48,16 @@ const ImageContainer = styled.img`
 `;
 const TextContainer = styled.div`
   margin-top: 5%;
+  margin-bottom: 10%;
 `;
 const Title = styled.h3`
   color: #6249a3;
-  margin-bottom: -23px;
+  margin-bottom: 2px;
   font-size: 17px;
 `;
 const Body = styled.h6`
   font-weight: 400;
+  font-size: 12px;
 `;
 const Form = styled.form`
   display: flex;
@@ -64,7 +66,7 @@ const Form = styled.form`
 const Input = styled.input`
   flex: 1;
   width: 85%;
-  margin: 0px 10px 10px 13px;
+  margin: 0px 0px 10px 20px;
   padding: 10px 5px 10px 5px;
   border: 1px solid #D3D3D3;
   border-radius: 5px;
@@ -72,29 +74,31 @@ const Input = styled.input`
 const Help = styled.div`
   display: flex;
   flex-direction: row;
-  margin: -25px 17px 0 15px;
+  margin: -5px 25px 20px 20px;
   color: #6249a3;
 `
 const Left = styled.h6`
   display: flex;
   align-items: center; 
   flex : 1;
+  font-size: 12px;
 `;
 const Right = styled.h6`
   display: flex;
   align-items: center;
   justify-content : flex-end;
   flex : 1;
+  font-size: 12px;
 `;
 const Button = styled.button`
   border: none;
   border-radius: 5px;
-  margin: -15px 0px 0px 12px;
+  margin: -15px 0px 0px 20px;
   padding: 10px 5px 10px 5px;
   background-color: #6a4fb0;
   color: white;
   cursor: pointer;
-  width: 90%;
+  width: 85%;
 `;
 const Signin = () => {
   const navigate = useNavigate();
@@ -200,11 +204,11 @@ const Signin = () => {
               <GoogleButton onClick={handleGoogleSignIn}style=
               {{backgroundColor: "white", 
                 color: "#606060",
-                width: "90%",
+                width: "87%",
                 height: "10vh",
-                padding: 0,
+                // padding: 0,
                 fontSize: "15px",
-                margin: "10px 0 0 12px",
+                margin: "10px 0 0 17px",
                 borderRadius: "5px",
                 textAlign: "center",
                 display: "flex",
@@ -213,11 +217,11 @@ const Signin = () => {
                 <GithubButton onClick={handleGitHubSignIn} type="light" style=
               {{backgroundColor: "white", 
                 color: "#606060",
-                width: "90%",
+                width: "87%",
                 height: "10vh",
-                padding: 0,
+                // padding: 0,
                 fontSize: "15px",
-                margin: "10px 0 0 12px",
+                margin: "10px 0 0 17px",
                 borderRadius: "5px",
                 textAlign: "center",
                 display: "flex",
@@ -228,4 +232,6 @@ const Signin = () => {
     </Container>
   );
 }
+
+
 export default Signin;

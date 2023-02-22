@@ -3,9 +3,6 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 const MainContainer = styled.div`
   display: flex;
@@ -13,9 +10,6 @@ const MainContainer = styled.div`
   justify-content: center;
 `;
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 const Title = styled.h3`
 `;
