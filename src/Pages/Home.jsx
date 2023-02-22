@@ -1,19 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
+import Navbar from '../Components/Navbar';
 const Container = styled.div`
 `;
 const Wrapper = styled.div`
-`;
-const Navbar = styled.div`
 `;
 const Home = () => {
   return (
     <div>
         <Container>
             <Wrapper>
-                <Navbar>
-
-                </Navbar>
+                <Navbar />
             </Wrapper>
         </Container>
     </div>
