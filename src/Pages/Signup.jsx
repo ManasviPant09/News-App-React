@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Image from "../assets/image.jpg";
+import {motion} from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 
 //FIREBASE
@@ -140,16 +141,30 @@ const Signup = () => {
   return (
     <Container>
         <Content>
-            <ImageContainer src = {Image} />
-            <TextContainer>
-                <Title>Welcome to Bardeen</Title>
-                <Body>Let's log in to launch your automations.</Body>
-            </TextContainer>
-            <Form>
-              <Input placeholder="Email Address" name="Email Address" type="text" id="email" value={email} onChange={handleEmailChange}/>
-              <Input placeholder="Password" name="password" type="password" id="password" value={password} onChange={handlePasswordChange}/>
-              <Button onClick={handleSignUp}>Sign Up</Button>
-            </Form>
+        <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}>
+          <ImageContainer src = {Image} /></motion.div>
+          <TextContainer>
+            <Title>
+            <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 2.0 }}>
+              Welcome to Bardeen
+            </motion.h2></Title>
+            <Body>
+            <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "black",opacity: 1}} transition={{ duration: 3.0}}>
+              Let's log in to launch your automations.
+            </motion.h2>
+            </Body>
+          </TextContainer>
+          <Form>
+            <Input placeholder="Email Address" name="Email Address" type="text" id="email" value={email} onChange={handleEmailChange}/>
+            <Input placeholder="Password" name="password" type="password" id="password" value={password} onChange={handlePasswordChange}/>
+            <Button onClick={handleSignUp}>
+            <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>Sign Up</motion.button></Button>
+          </Form>
         </Content>   
     </Container>
   );

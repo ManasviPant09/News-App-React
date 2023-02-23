@@ -6,6 +6,7 @@ import {GithubButton} from "react-github-login-button";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import {motion} from "framer-motion";
 
 //FIREBASE
 import firebase from 'firebase/compat/app';
@@ -231,24 +232,41 @@ const Signin = () => {
 
   return (
     <Container>
-        <Content>
-            <ImageContainer src = {Image} />
-            <TextContainer>
-                <Title>Welcome to Bardeen</Title>
-                <Body>Let's log in to launch your automations.</Body>
-            </TextContainer>
-            <Form>
-              <Input placeholder="Email Address" name="Email Address" type="text" id="email" value={email} onChange={handleEmailChange}/>
-              <Input placeholder="Password" name="password" type="password" id="password" value={password} onChange={handlePasswordChange}/>
-              <Help>
-                <Left><Link to="/signup" style={{ textDecoration: "none",color: "#6249a3"}}>Create Account</Link></Left>
-                <Right>Forgot Password?</Right>
-              </Help>
-              <Button onClick={handleSignIn}>Sign In</Button>
-              <GoogleButton onClick={handleGoogleSignIn}style={GoogleStyle}/>
-                <GithubButton onClick={handleGitHubSignIn} type="light" style={GithubStyle}/>
-            </Form>
-        </Content>   
+      <Content>
+      <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.5 }}>
+        <ImageContainer src = {Image} /></motion.div>
+        <TextContainer>
+          <Title>
+            <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 2.0 }}>
+              Welcome to Bardeen
+            </motion.h2>                  
+          </Title>
+          <Body>
+          <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "black",opacity: 1}} transition={{ duration: 3.0}}>
+            Let's log in to launch your automations.
+          </motion.h2>
+          </Body>
+        </TextContainer>
+        <Form>
+          <Input placeholder="Email Address" name="Email Address" type="text" id="email" value={email} onChange={handleEmailChange}/>
+          <Input placeholder="Password" name="password" type="password" id="password" value={password} onChange={handlePasswordChange}/>
+          <Help>
+            <Left><Link to="/signup" style={{ textDecoration: "none",color: "#6249a3"}}>Create Account</Link></Left>
+            <Right>Forgot Password?</Right>
+            </Help>
+           <Button onClick={handleSignIn}>
+           <motion.button
+           whileHover={{ scale: 1.1 }}
+           whileTap={{ scale: 0.9 }}>
+            Sign In</motion.button>
+          </Button>
+          <GoogleButton onClick={handleGoogleSignIn}style={GoogleStyle}/>
+          <GithubButton onClick={handleGitHubSignIn} type="light" style={GithubStyle}/>
+        </Form>
+      </Content>   
     </Container>
   );
 }
