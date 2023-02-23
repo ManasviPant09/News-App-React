@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Image from "../assets/image.jpg";
+import { useNavigate } from 'react-router-dom';
 
 //FIREBASE
 import firebase from 'firebase/compat/app';
@@ -117,6 +118,7 @@ const Signup = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const navigate = useNavigate();
   const handleSignUp = async (e) => {
     e.preventDefault();
     await firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -127,6 +129,7 @@ const Signup = () => {
           email: email,
           password: password
         });
+        navigate('/home');
       })
       .catch((error) => {
         const errorCode = error.code;
