@@ -42,7 +42,7 @@ const Content = styled.div`
   width: 23%;
   height: 89vh;
   background: linear-gradient(to top,#aed8f7,white 75%);
-  border-radius: 0px;
+  border-radius: 10px;
   box-shadow: 5px 5px 25px -5px;
   @media (max-width: 768px) {
     width: 80%;
@@ -52,6 +52,8 @@ const Content = styled.div`
 const ImageContainer = styled.img`
    width: 50%;
    height: 20vh;
+   display: flex;
+   margin: 0 25% 0 25%;
    @media (max-width: 768px) { 
     width: 100%;
   }
