@@ -26,6 +26,7 @@ const firebaseConfig = {
 
 // INITIALIZE FIREBASE
 firebase.initializeApp(firebaseConfig);
+
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -35,18 +36,20 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   @media (max-width: 768px) {
-    height: auto;
+    max-width: 600px;
+    width: 100%;
+    height: 100vh;
   }
 `;
 const Content = styled.div`
-  width: 23%;
-  height: 89vh;
+  width: 25%;
+  height: 90%;
   background: linear-gradient(to top,#aed8f7,white 75%);
-  border-radius: 10px;
+  border-radius: 1rem;
   box-shadow: 5px 5px 25px -5px;
   @media (max-width: 768px) {
     width: 80%;
-    height: auto;
+    height: 85%;
   }
 `;
 const ImageContainer = styled.img`
@@ -55,28 +58,29 @@ const ImageContainer = styled.img`
    display: flex;
    margin: 0 25% 0 25%;
    @media (max-width: 768px) { 
-    width: 100%;
+    width: 50%;
   }
 `;
 const TextContainer = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
   @media (max-width: 768px) { 
-    margin: 5% 0;
+    margin: 5% 0 5% -10%;
   }
 `;
 const Title = styled.h3`
   color: #6249a3;
-  margin-bottom: 2px;
-  font-size: 17px;
+  margin-bottom: 1%;
+  font-size: 100%;
+  font-weight: 700;
   @media (max-width: 768px) { 
     width: 100%;
     margin: 0 20px 10px 20px;
   }
 `;
 const Body = styled.h6`
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 0.75rem;
   @media (max-width: 768px) { 
     width: 100%;
     margin: 10px 20px 0px 20px;
@@ -85,20 +89,27 @@ const Body = styled.h6`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) { 
+    width: 100%;
+    margin-left: 0.75%;
+  }
 `;
 const Input = styled.input`
   flex: 1;
   width: 85%;
-  margin: 0px 0px 10px 20px;
-  padding: 10px 5px 10px 5px;
+  margin: 0 0 5% 7%;
+  padding: 3% 1% 3% 1%;
   border: 1px solid #D3D3D3;
   border-radius: 5px;
 `;
 const Help = styled.div`
   display: flex;
   flex-direction: row;
-  margin: -5px 25px 20px 20px;
+  margin: -4% 8% 10% 8%;
   color: #6249a3;
+  @media (max-width: 768px) { 
+    margin-right: 10%;
+  }
 `
 const Left = styled.h6`
   display: flex;
@@ -116,12 +127,12 @@ const Right = styled.h6`
 const Button = styled.button`
   border: none;
   border-radius: 5px;
-  margin: -15px 0px 0px 20px;
-  padding: 10px 5px 10px 5px;
+  margin: -5% 8% 10% 8%;
+  padding: 3% 1% 3% 1%;
   background-color: #6a4fb0;
   color: white;
   cursor: pointer;
-  width: 85%;
+  width: 84%;
 `;
 const Signin = () => {
   const navigate = useNavigate();
@@ -149,23 +160,6 @@ const Signin = () => {
       });
   };
 
-  const handleSignUp = async (e) => {
-    e.preventDefault();
-    await firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log("created");
-        firebase.database().ref(`users/${user.uid}`).set({
-          email: email,
-          password: password
-        });
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode,errorMessage)
-      });
-  }; 
   //SIGN IN WITH GOOGLE
   const handleGoogleSignIn = (e) => {
     e.preventDefault();
@@ -227,11 +221,11 @@ const Signin = () => {
               <GoogleButton onClick={handleGoogleSignIn}style=
               {{backgroundColor: "white", 
                 color: "#606060",
-                width: "87%",
+                width: "85%",
                 height: "10vh",
                 // padding: 0,
                 fontSize: "15px",
-                margin: "10px 0 0 17px",
+                margin: "-5% 8% 8% 8%",
                 borderRadius: "5px",
                 textAlign: "center",
                 display: "flex",
@@ -240,11 +234,11 @@ const Signin = () => {
                 <GithubButton onClick={handleGitHubSignIn} type="light" style=
               {{backgroundColor: "white", 
                 color: "#606060",
-                width: "87%",
+                width: "85%",
                 height: "10vh",
                 // padding: 0,
                 fontSize: "15px",
-                margin: "10px 0 0 17px",
+                margin: "-5% 8% 10% 8%",
                 borderRadius: "5px",
                 textAlign: "center",
                 display: "flex",
