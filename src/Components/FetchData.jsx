@@ -20,41 +20,38 @@ const FetchData = () => {
     fetchData();
   },[]);
   let w = { width: "400px" };
-  let a = data.map((items)=>{
-    return(
-        <div className="p-8">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={items.urlToImage}/>
-        <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{items.title}</div>
-            <p className="text-gray-700 text-base">{items.description}</p>
-            <button className="font-bold text-xl mb-2"> <a href={items.url}>Read more</a></button>
-        </div>
-        </div>
-        </div>
-    )
-  });
-  console.log(a);
+  // let a = data.map((items)=>{
+  //       <div className="p-8">
+  //       <div className="max-w-sm rounded overflow-hidden shadow-lg">
+  //       <img className="w-full" src={items.urlToImage}/>
+  //       <div className="px-6 py-4">
+  //           <div className="font-bold text-xl mb-2">{items.title}</div>
+  //           <p className="text-gray-700 text-base">{items.description}</p>
+  //           <button className="font-bold text-xl mb-2"> <a href={items.url}>Read more</a></button>
+  //       </div>
+  //       </div>
+  //       </div>
+  // });
+  // console.log(a);
   return (
-    <Container>
-        <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-1">
-            {a}</div>;
-    {/* {data ? data.map((items,index)=>(
+    <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-1">
+    {data ? data.map((items,index)=>(
         <>
-        <div className="p-8"></div>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-full" src={items.urlToImage}/>
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{items.title}</div>
-                <p className="text-gray-700 text-base">{items.description}</p>
-                <button className="font-bold text-xl mb-2"> <a href={items.url}>Read more</a></button>
-            </div>
-        </div>
+        <div className="p-8">
+         <div className="max-w-sm rounded overflow-hidden shadow-lg">
+         <img className="w-full" src={items.urlToImage}/>
+         <div className="px-6 py-4">
+             <div className="font-bold text-xl mb-2">{items.title}</div>
+             <p className="text-gray-700 text-base">{items.description}</p>
+             <button className="font-bold text-xl mb-2"> <a href={items.url}>Read more</a></button>
+         </div>
+         </div>
+         </div>
     </>
     ))
-    : "Not able to fetch"} */}
-    </Container>
+    : "Not able to fetch"}
+    </div>
   );
 }
 
-export default FetchData
+export default FetchData;
