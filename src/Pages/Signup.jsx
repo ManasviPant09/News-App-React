@@ -153,7 +153,7 @@ const Signup = () => {
             </motion.h2></Title>
             <Body>
             <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "black",opacity: 1}} transition={{ duration: 3.0}}>
-              Let's log in to launch your automations.
+              Let's signup in to launch your automations.
             </motion.h2>
             </Body>
           </TextContainer>
