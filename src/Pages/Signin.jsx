@@ -201,6 +201,31 @@ const Signin = () => {
         console.log(errorCode, errorMessage);
       });
   };
+  const GoogleStyle = {
+    backgroundColor: "white", 
+    color: "#606060",
+    width: "85%",
+    height: "10vh",
+    fontSize: "15px",
+    margin: "-5% 8% 8% 8%",
+    borderRadius: "5px",
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
+
+  }
+  const GithubStyle = {
+    backgroundColor: "white", 
+    color: "#606060",
+    width: "85%",
+    height: "10vh",
+    fontSize: "15px",
+    margin: "-5% 8% 10% 8%",
+    borderRadius: "5px",
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center"
+  }
 
   return (
     <Container>
@@ -218,32 +243,8 @@ const Signin = () => {
                 <Right>Forgot Password?</Right>
               </Help>
               <Button onClick={handleSignIn}>Sign In</Button>
-              <GoogleButton onClick={handleGoogleSignIn}style=
-              {{backgroundColor: "white", 
-                color: "#606060",
-                width: "85%",
-                height: "10vh",
-                // padding: 0,
-                fontSize: "15px",
-                margin: "-5% 8% 8% 8%",
-                borderRadius: "5px",
-                textAlign: "center",
-                display: "flex",
-                alignItems: "center"
-                }}/>
-                <GithubButton onClick={handleGitHubSignIn} type="light" style=
-              {{backgroundColor: "white", 
-                color: "#606060",
-                width: "85%",
-                height: "10vh",
-                // padding: 0,
-                fontSize: "15px",
-                margin: "-5% 8% 10% 8%",
-                borderRadius: "5px",
-                textAlign: "center",
-                display: "flex",
-                alignItems: "center"
-                }}/>
+              <GoogleButton onClick={handleGoogleSignIn}style={GoogleStyle}/>
+                <GithubButton onClick={handleGitHubSignIn} type="light" style={GithubStyle}/>
             </Form>
         </Content>   
     </Container>
