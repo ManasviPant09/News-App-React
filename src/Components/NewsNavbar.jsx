@@ -13,7 +13,7 @@ const NewsNavbar = () => {
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div class="text-sm lg:flex-grow">
-        <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 2.0 }}>
+        <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 5.0 }}>
          <a href="#responsive-header" class="block mt-4 mb-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white text-xl mr-4">
           Learn
         </a>
@@ -29,7 +29,7 @@ const NewsNavbar = () => {
        </motion.h2>
       </div>
     <div>
-     <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 2.0 }}>
+     <motion.h2 initial={{color: "white",opacity: 0}} animate={{color: "#6249a3",opacity: 1}} transition={{ duration: 5.0 }}>
         <a href="#responsive-header" class="block mt-4 mb-4 mr-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white text-xl">
          <TwitterIcon />
         </a>
