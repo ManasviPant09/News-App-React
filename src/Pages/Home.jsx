@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import NewsNavbar from '../Components/NewsNavbar';
 import FetchData from '../Components/FetchData';
+import Footer from '../Components/Footer';
 
 const Container = styled.div`
 `;
@@ -14,6 +15,7 @@ const Home = () => {
             <Wrapper>
                 <NewsNavbar />
                 <FetchData />
+                <Footer />
             </Wrapper>
         </Container>
     </div>
