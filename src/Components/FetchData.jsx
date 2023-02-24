@@ -13,8 +13,12 @@ const Card = styled.div`
   flex-direction: column;
   height: 500px; /* set a fixed height for the card */
   overflow: hidden; /* hide any content that exceeds the card height */
+  min-height: 500px;
 `;
-
+const Image = styled.img`
+  max-width: 100%;
+  max-height: 200px;
+`;
 const Title = styled.div`
   font-size: 24px;
   font-weight: bold;
@@ -57,13 +61,14 @@ const FetchData = () => {
   // });
   // console.log(a);
   return (
+    <Container>
     <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-1">
     {data ? data.map((items,index)=>(
         <>
         <Card key={index}>
         <div className="p-8">
          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-         <img className="w-full" src={items.urlToImage}/>
+         <Image img className="w-full" src={items.urlToImage}/>
          <div className="px-6 py-4">
              <Title><div className="font-bold text-xl mb-2">{items.title}</div></Title>
              <Description><p className="text-gray-700 text-base">{items.description}</p> </Description>
@@ -76,6 +81,7 @@ const FetchData = () => {
     ))
     : "Not able to fetch"}
     </div>
+    </Container>
   );
 }
 
