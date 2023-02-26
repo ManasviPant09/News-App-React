@@ -37,7 +37,6 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   @media (max-width: 768px) {
-    max-width: 600px;
     width: 100%;
     height: 100vh;
   }
@@ -134,6 +133,11 @@ const Button = styled.button`
   color: white;
   cursor: pointer;
   width: 84%;
+`;
+const ButtonContainer = styled.div`
+  @media (max-width: 768px) { 
+    margin-right: 10%;
+}
 `;
 const Signin = () => {
   const navigate = useNavigate();
@@ -263,8 +267,10 @@ const Signin = () => {
            whileTap={{ scale: 0.9 }}>
             Sign In</motion.button>
           </Button>
+          <ButtonContainer>
           <GoogleButton onClick={handleGoogleSignIn}style={GoogleStyle}/>
           <GithubButton onClick={handleGitHubSignIn} type="light" style={GithubStyle}/>
+          </ButtonContainer>
         </Form>
       </Content>   
     </Container>

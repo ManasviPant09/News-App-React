@@ -39,14 +39,13 @@ const FetchData = () => {
   const [data,setData] = useState("");
   const fetchData = async () =>{
     await axios
-    .get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=ecb8e678f9214d078373268968f2ec27"
+    .get("https://newsapi.org/v2/everything?domains=wsj.com&apiKey=ecb8e678f9214d078373268968f2ec27"
     )
     .then((res)=>setData(res.data.articles));
   }
   useEffect(()=>{
     fetchData();
   },[]);
-  let w = { width: "400px" };
   // let a = data.map((items)=>{
   //       <div className="p-8">
   //       <div className="max-w-sm rounded overflow-hidden shadow-lg">
@@ -68,7 +67,7 @@ const FetchData = () => {
         <Card key={index}>
         <div className="p-8">
          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-         <Image img className="w-full" src={items.urlToImage}/>
+         {items.urlToImage && <Image src={items.urlToImage} />}
          <div className="px-6 py-4">
              <Title><div className="font-bold text-xl mb-2">{items.title}</div></Title>
              <Description><p className="text-gray-700 text-base">{items.description}</p> </Description>
