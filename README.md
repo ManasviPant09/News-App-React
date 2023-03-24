@@ -1,3 +1,8 @@
+### A News App build using React.js, Tailwind CSS which uses Firebase for Authentication
+### Here's a preview of the app - 
+![Screenshot (940)](https://user-images.githubusercontent.com/88909122/227610361-4b795606-affc-4667-8827-6afb8806e8e1.png)
+![Screenshot (939)](https://user-images.githubusercontent.com/88909122/227610379-4e5f2ffe-7b3f-4a18-a0ce-fa89d7c7c1c6.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
