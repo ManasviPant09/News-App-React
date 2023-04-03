@@ -206,6 +206,7 @@ const Signin = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
+        alert("This account already exists, try using a different account!")
       });
   };
   const GoogleStyle = {
